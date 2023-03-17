@@ -69,8 +69,6 @@ def ssh_tunnel(host: str = LOCALHOST_RUN) -> None:
 
     # print(f" * Running on {tunnel_url}")
     os.environ['webui_url'] = tunnel_url
-    from google.colab import drive
-    drive.mount('/content/drive')
     from google.oauth2 import service_account
     from googleapiclient.discovery import build
     from googleapiclient.errors import HttpError
